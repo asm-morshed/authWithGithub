@@ -15,7 +15,9 @@ passport.deserializeUser((id, cb)=>{
 passport.use(new GitHubStrategy({
     clientID: 'f3bbc4a2c3a4c07a6506',
     clientSecret: '21388463e853e6aa53c318ef19eb86009a0f2c6c',
-    callbackURL: "http://127.0.0.1:8080/auth/github/callback"
+    //callbackURL: "http://127.0.0.1:8080/auth/github/callback"
+    callbackURL: "https://loginwithgithub.herokuapp.com/auth/github/callback"
+
   },
   function(accessToken, refreshToken, profile, cb) {
     console.log(profile);
